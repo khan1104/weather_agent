@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import uvicorn
 from agent.llm_agent import ask
 
-
+PORT=8000
 app=FastAPI(title="Weather AI Agent")
 
 class AskRequest(BaseModel):
@@ -24,4 +24,4 @@ async def ask_ai(user_query:AskRequest):
 
 
 if __name__=="__main__":
-    uvicorn.run("main:app",reload=True)
+    uvicorn.run("main:app",host="0.0.0.0", port=PORT)
