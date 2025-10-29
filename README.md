@@ -10,15 +10,19 @@ git clone https://github.com/khan1104/weather_agent.git
 ```bash
 cd weather_agent
 ```
-### 3. sync dependencies (it will create virtual enviornment and install all the dependencies)
+### 3. create a .env in the root folder and add open ai key
+```bash
+OPEN_AI_KEY=
+```
+### 4. sync dependencies (it will create virtual enviornment and install all the dependencies)
 ```bash
 uv sync
 ```
-### 4. run the server
+### 5. run the server
 ```bash
 uv run main.py
 ```
-### 5. open the swagger ui on http://127.0.0.1:8000/docs
+### 6. open the swagger ui on http://127.0.0.1:8000/docs
 
 ---
 
@@ -60,4 +64,5 @@ the LLM calls the weather tool multiple times, gets results for each city, and p
 
 **8. Clean Output to Client**
   - The final message is stripped of unnecessary newline characters and returned as a clean string JSON response:
+
 
